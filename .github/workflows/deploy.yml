@@ -16,11 +16,10 @@ jobs:
       - name: Install PHP dependencies
         run: composer install --no-dev --optimize-autoloader
 
-      - name: Build Laravel cache
+      - name: Remove Laravel caches (important)
         run: |
-          php artisan config:cache
-          php artisan route:cache
-          php artisan view:cache
+          rm -f bootstrap/cache/*.php
+          rm -rf storage/framework/views/*
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
@@ -35,4 +34,9 @@ jobs:
             node_modules/**
             .git/**
             .github/**
+            public/**
             storage/logs/**
+            bootstrap/cache/*.php
+            storage/framework/views/**
+            .env.example
+            README.md
