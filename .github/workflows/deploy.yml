@@ -16,14 +16,14 @@ jobs:
       - name: Install PHP dependencies
         run: composer install --no-dev --optimize-autoloader
 
-      - name: Build Laravel caches
+      - name: Build Laravel cache
         run: |
           php artisan config:cache
           php artisan route:cache
           php artisan view:cache
 
-      - name: Deploy to InfinityFree via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
