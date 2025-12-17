@@ -32,3 +32,10 @@ jobs:
           port: ${{ secrets.FTP_PORT }}
           local-dir: "./"
           server-dir: "/htdocs/"
+          exclude: |
+            vendor/**
+            node_modules/**
+            .git/**
+            .github/**
+            storage/logs/**
+            storage/framework/cache/data/**
