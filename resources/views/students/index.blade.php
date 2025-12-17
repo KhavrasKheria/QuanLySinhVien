@@ -24,14 +24,14 @@
             <tr>
                 <td>{{ $s->id }}</td>
                 <td>{{ $s->name }}</td>
-                <td>{{ $s->gender }}</td>
+                <td> {{ $s->gender == 'male' ? 'Nam' : ($s->gender == 'female' ? 'Nữ' : 'Khác') }} </td>
                 <td>{{ $s->email }}</td>
                 <td>
                     <a href="{{ route('students.edit', $s->id) }}" class="btn btn-sm btn-warning">Sửa</a>
 
-                    <form action="{{ route('students.destroy', $s->id) }}" 
-                          method="POST" 
-                          class="d-inline">
+                    <form action="{{ route('students.destroy', $s->id) }}"
+                        method="POST"
+                        class="d-inline">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-sm btn-danger" onclick="return confirm('Xóa sinh viên này?')">
