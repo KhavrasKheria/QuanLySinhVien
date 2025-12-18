@@ -4,7 +4,7 @@
 <div class="container mt-5">
 
     <div class="text-center mb-4">
-        <h1 class="fw-bold">Hệ thống quản lý</h1>
+        <h1 class="fw-bold">Hệ thống quản lý sinh vien</h1>
         <p class="text-muted">Chọn một chức năng bên dưới để bắt đầu</p>
     </div>
 

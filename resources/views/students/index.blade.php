@@ -4,6 +4,7 @@
 <div class="container mt-4">
 
     <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>Thi thứ 5 - là ca 4- Nguyễn Lê Anh Kiệt</h1>
         <h2>Danh sách sinh viên</h2>
         <a href="{{ route('students.create') }}" class="btn btn-primary">+ Thêm sinh viên</a>
     </div>
